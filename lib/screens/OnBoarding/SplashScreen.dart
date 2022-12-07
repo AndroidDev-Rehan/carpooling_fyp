@@ -2,7 +2,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-import '../../utils/color_constant.dart';
+import '../../utils/colors.dart';
 import '../../utils/image_constant.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      Get.offAll(() => const OnBoardingScreen());
+      Get.offAll(() =>  OnBoardingScreen());
     });
   }
 
