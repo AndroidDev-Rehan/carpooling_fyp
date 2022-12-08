@@ -4,7 +4,10 @@ import 'package:carpooling_fyp/widgets/custom_button.dart';
 import 'package:carpooling_fyp/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../../utils/constants.dart';
+import '../../utils/image_constant.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -18,13 +21,17 @@ class LoginScreen extends StatelessWidget {
           padding:  EdgeInsets.symmetric(horizontal: resWidth(29)),
           child: Column(
             children: [
-              resHeightBox(61),
+              resHeightBox(30),
               SizedBox(
                 width: resWidth(299),
                 height: resHeight(284),
-                child: Stack(
+                child: true ?
+                Image.asset("assets/images/login.png") :
+
+                Stack(
                   children: [
-                    SvgPicture.asset("assets/images/bg.svg")
+                    // SvgPicture.asset("assets/images/bg.svg"),
+                    Image.asset("assets/images/login.png")
                   ],
                 ),
               ),
@@ -33,9 +40,9 @@ class LoginScreen extends StatelessWidget {
               resHeightBox(3),
               Text("Please login to your account", style: CustomTextStyles.primary4TextStyle14w400,),
               resHeightBox(23),
-              CustomTextField(label: "Email", prefixIcon: Icon(Icons.email),),
+              CustomTextField(label: "Email", prefixIcon: Icon(Icons.email, color: Colors.white,),),
               resHeightBox(17),
-              CustomTextField(label: "Password", prefixIcon: Icon(Icons.lock),postfixIcon: Icon(Icons.remove_red_eye)),
+              CustomTextField(label: "Password", prefixIcon: Icon(Icons.lock,color: Colors.white),postfixIcon: Icon(Icons.remove_red_eye, color: Colors.white,)),
               resHeightBox(15),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -121,4 +128,21 @@ class LoginScreen extends StatelessWidget {
       ],
     );
   }
+
+  getPadding({ double? left,  double? top,  double? right,  double? bottom}) {
+    return EdgeInsets.only(left: getVerticalSize(left ?? 0), top:getHorizontalSize(top ?? 0), right:getVerticalSize(right ?? 0), bottom: getHorizontalSize(bottom ?? 0));
+  }
+
+  getVerticalSize(double d) {
+    return Get.height * d / 896;
+  }
+
+  getMargin({ double? left,  double? top,  double? right,  double? bottom}) {
+    return EdgeInsets.only(left: getVerticalSize(left ?? 0), top:getHorizontalSize(top ?? 0), right:getVerticalSize(right ?? 0), bottom: getHorizontalSize(bottom ?? 0));
+  }
+
+  getHorizontalSize(double d) {
+    return Get.width * d / 414;
+  }
+
 }

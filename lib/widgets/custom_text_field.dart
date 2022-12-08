@@ -12,19 +12,32 @@ class CustomTextField extends StatelessWidget {
 
       decoration: InputDecoration(
 
-        // isDense: true,
+
+        isDense: true,
         // isCollapsed: true,
-        // prefix: prefixIcon,
-        // suffix: postfixIcon,
+        prefix: Padding(
+          padding: const EdgeInsets.only(right: 8.0),
+          child: prefixIcon,
+        ),
+        suffix: postfixIcon,
+        // contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: ),
+        //   prefix: Icon(Icons.add),
         border: OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.white,
-            width: 10
+          ),
+
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+              color: Colors.white,
           ),
 
         ),
         label: Text(label, style: TextStyle(color: Colors.white),)
+
       ),
+      style: TextStyle(color: Colors.white),
     );
   }
 }
