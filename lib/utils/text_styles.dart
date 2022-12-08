@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import 'colors.dart';
 
-class CustomTextStyles {
-  static const TextStyle greyTextStyle18 =
-      TextStyle(color: Colors.grey, fontSize: 18);
-  static TextStyle greyTextStyle18Opacity50 =
-      TextStyle(color: Colors.grey.withOpacity(0.5), fontSize: 18);
+class CustomTextStyles{
+  static const TextStyle greyTextStyle18 = TextStyle(color: Colors.grey, fontSize: 18);
+  static TextStyle greyTextStyle18Opacity50 = TextStyle(color: Colors.grey.withOpacity(0.5), fontSize: 18);
+
+  static const TextStyle whiteTextStyle32w400 = TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.w400);
+  static const  TextStyle primary4TextStyle14w400 = TextStyle(color: ColorConstant.primaryLight4, fontSize: 14, fontWeight: FontWeight.w400);
+
+  static const  TextStyle primary2TextStyle14w400 = TextStyle(color: ColorConstant.primaryLight2, fontSize: 14, fontWeight: FontWeight.w400);
+
+  static const  TextStyle whiteTextStyle14w400 = TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w400);
+
 
   static TextStyle txtPoppinsExtraBold14 = TextStyle(
     color: ColorConstant.cyan600,
@@ -764,6 +769,10 @@ class CustomTextStyles {
     fontFamily: 'Roboto',
     fontWeight: FontWeight.w400,
   );
+
+
+
+
 }
 double getSize(double px) {
   var height = getVerticalSize(px);

@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ColorConstant{
- static const Color primary =  Color.fromRGBO(49, 55, 62, 1);
- static const Color primaryLight1 =  Color.fromRGBO(76, 86, 95, 1);
- static const Color primaryLight2 =  Color.fromRGBO(104, 114, 125, 1);
- static const Color primaryLight3 =  Color.fromRGBO(121, 130, 147, 1);
- static const Color primaryLight4 =  Color.fromRGBO(147, 154, 168, 1);
+ static const Color primary =  Color.fromRGBO(49, 55, 62, 1.0);
+ static const Color primaryLight1 =  Color.fromRGBO(76, 86, 95, 1.0);
+ static const Color primaryLight2 =  Color.fromRGBO(104, 114, 125, 1.0);
+ static const Color primaryLight3 =  Color.fromRGBO(121, 130, 147, 1.0);
+ static const Color primaryLight4 =  Color.fromRGBO(147, 154, 168, 1.0);
+
+ static const Color primaryLight1variant =  Color.fromRGBO(72, 82, 91, 1);
+
 
  static Color bluegray51 = fromHex('#eef1f8');
 
