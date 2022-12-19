@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'size_utils.dart';
 import 'colors.dart';
 
 class CustomTextStyles{
@@ -783,13 +783,5 @@ double getSize(double px) {
     return width.toInt().toDouble();
   }
 }
-getHorizontalSize(double d) {
-  return Get.width * d / 414;
-}
-getVerticalSize(double d) {
-  return Get.height * d / 896;
-}
-double getFontSize(double px) {
-  return getSize(px);
-}
+
 

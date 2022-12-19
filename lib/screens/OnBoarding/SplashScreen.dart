@@ -1,11 +1,12 @@
+import 'package:carpooling_fyp/utils/size_utils.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-
+import '../../utils/size_utils.dart';
 import '../../utils/colors.dart';
 import '../../utils/image_constant.dart';
 import 'package:flutter/material.dart';
-
+import 'dart:math' as math;
 import '../../utils/text_styles.dart';
 import 'OnBoardingScreen.dart';
 
@@ -31,15 +32,39 @@ class _SplashScreenState extends State<SplashScreen> {
     return SafeArea(
         child: Scaffold(
             backgroundColor: ColorConstant.gray900,
-            body: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+            body: Container(
+              width: Get.width,
+              height: Get.height,
+              child: Stack(
                 children: [
-                  SvgPicture.asset(ImageConstant.splashLogo),
-                  const SizedBox(height: 20),
-                  Text(
-                    'CarPooling',
+                  Positioned(
+                    top: -19,
+                    left: -33,
+                    right: 0,
+                    child: Transform(
+                      alignment: Alignment.center,
+                      transform: Matrix4.rotationY(math.pi),
+                      child: SvgPicture.asset(
+                          width: size.width,
+                          height: getVerticalSize(700),
+                          ImageConstant.splashRight),
+                    ),
                   ),
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    top: getVerticalSize(331),
+                    left: getHorizontalSize(-114),
+                    child: SizedBox(
+                      width: Get.width,
+                      height: Get.height * 0.5,
+                      child: SvgPicture.asset(
+                          fit: BoxFit.fill,
+                          allowDrawingOutsideViewBox: true,
+                          ImageConstant.splashLeft),
+                    ),
+                  ),
+                  Center(child: Image.asset(ImageConstant.splashLogoPng)),
                 ],
               ),
             )));
