@@ -15,12 +15,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: 'CarPooling',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         textTheme: GoogleFonts.plusJakartaSansTextTheme(),
       ),
-      home: LoginScreen(),
+      home: SplashScreen(),
     );
   }
 }

@@ -6,6 +6,7 @@ import '../../utils/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/image_constant.dart';
+import '../auth/login_screen.dart';
 
 class OnboardingThreeScreen extends StatelessWidget {
   @override
@@ -245,7 +246,7 @@ class OnboardingThreeScreen extends StatelessWidget {
   }
 
   onTapSkip() {
-    // Get.to(()=>LoginScreen());
+    Get.to(()=>LoginScreen());
   }
 
   onTapTxtWelcomebacklog() {
